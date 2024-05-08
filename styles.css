@@ -1,6 +1,6 @@
 body {
-  background-color: #83a87e;
-background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+  background-color: #092919;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
   margin: auto;
   text-align: center;
   font-family: "Amiri", serif;
@@ -22,16 +22,16 @@ h1 {
 }
 
 @keyframes glow {
-	0%,
-	50%,
-	100% {
-		opacity: 1;
-	}
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
 
-	25%,
-	75% {
-		opacity: 0;
-	}
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 .ronda {
@@ -41,7 +41,7 @@ h1 {
   font-size: 1.5em;
   color: red;
   border-radius: 3px;
-  background: #2D2727;
+  background: #092919;
   border-radius: 3px;
   box-shadow: 0 0 0 8px #07310f, 0 0 0 10px #fff;
   text-shadow: 2px 2px 20px red;
@@ -90,28 +90,29 @@ h1 {
   border-radius: 5px;
   width: 200px;
   box-shadow: rgb(0, 0, 0) 5px 5px 6px 5px, rgba(255, 255, 255) 0px 1px 9px;
-  background: #2D2727;
+  background: #092919;
 }
 
 .contador::before {
   content: "";
   position: absolute;
   inset: 10px;
-  background-color: #4D4646;
+  background-color: #000;
   border: 3px solid #fff;
+  border-radius: 10px;
 }
 
 .contador::after {
   content: "";
   position: absolute;
   inset: 20px;
-  background-color: #4D4646;
+  background-color: #000;
   border: 3px solid #fff;
 }
 
 .marcador {
   font-size: 2em;
-  color: #3CCF4E;
+  color: #3ccf4e;
   text-shadow: 2px 2px 20px rgb(10, 250, 90);
 }
 
@@ -167,9 +168,19 @@ img {
   }
 }
 
-.refreshButton{
-  background: rgb(30,31,31);
-  background: linear-gradient(81deg, rgba(30,31,31,1) 65%, rgba(112,108,108,1) 97%);
+.refreshButton {
+  background: #52c234; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #061700,
+    #52c234
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #061700,
+    #52c234
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: #fff;
   font-family: Trebuchet MS;
   font-size: 18px;
@@ -182,20 +193,24 @@ img {
   border: 0px solid #000;
   border-radius: 10px;
   display: inline-block;
-  box-shadow: 0px 0px 10px 0px #2D2D2D;
+  box-shadow: 0px 0px 10px 0px #2d2d2d;
   text-shadow: 2px 2px 10px #000;
   cursor: pointer;
- }
- .refreshButton:hover{
-  box-shadow: inset 0px 0px 40px 0px rgba(0,0,0,0.2);
- }
- .refreshButton:active{
+}
+.refreshButton:hover {
+  box-shadow: inset 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+}
+.refreshButton:active {
   transform: scale(0.95);
- }
+}
 
- .refreshButtonAnimation {
-  background: rgb(106,110,110);
-  background: linear-gradient(81deg, rgba(106,110,110,1) 1%, rgba(245,242,242,1) 52%);
+.refreshButtonAnimation {
+  background: rgb(106, 110, 110);
+  background: linear-gradient(
+    81deg,
+    rgba(106, 110, 110, 1) 1%,
+    rgba(245, 242, 242, 1) 52%
+  );
   font-family: Trebuchet MS;
   font-size: 18px;
   font-weight: 800;
@@ -205,7 +220,7 @@ img {
   padding: 0px 25px;
   border-radius: 10px;
   display: inline-block;
-  box-shadow: 0px 0px 10px 0px #2D2D2D;
+  box-shadow: 0px 0px 10px 0px #2d2d2d;
   text-shadow: 2px 2px 10px #000;
   color: #000;
   cursor: pointer;
