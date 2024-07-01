@@ -78,19 +78,15 @@ playButton2.addEventListener("click", function playJug2() {
 
   // Segundo bucle con retardo entre imágenes
   for (let j = 0; j < manoJugador2.length; j++) {
-    // Utilizar una función para crear un ámbito de bloque. Esta técnica, conocida como el patrón de función inmediata o
-    // IIFE (Immediately Invoked Function Expression), permite que la función anónima capture el valor actual de j
-    // para cada iteración del bucle, evitando así el problema del cierre del bucle
-    (function (indice) {
+   (function (indice) {
       setTimeout(function () {
         dadosJugador2[indice].src =
           "./images/dice" + manoJugador2[indice] + ".png";
         dadosJugador2[indice].classList.add("shakeDice");
-        // Remover la clase "shakeDice" después de 1000 milisegundos
         setTimeout(function () {
           dadosJugador2[indice].classList.remove("shakeDice");
         }, 1000);
-      }, j * 500); // El retardo es de medio segundo (500 milisegundos) multiplicado por el índice para la animación y para cada img
+      }, j * 500); 
     })(j);
   }
 
